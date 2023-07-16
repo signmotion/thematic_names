@@ -19,3 +19,5 @@ Can generate **infinity** stream of names with adding number to name every loop.
 4. Names does not contain trailing spaces.
 
 5. Names does not contain double spaces.
+
+6. Any new word in name starts with capital letter.

@@ -27,6 +27,11 @@ void main() {
       final all = Names.volcanos(randomize: false).all;
       expect(checkIsNotContainDoubleSpaces(all), true);
     });
+
+    test('Principle 6: Any new word in name starts with capital letter.', () {
+      final all = Names.volcanos(randomize: false).all;
+      expect(checkIsAnyNewWordStartsWIthCapitalLetter(all), true);
+    });
   });
 }
 
@@ -78,6 +83,20 @@ bool checkIsNotContainDoubleSpaces(List<String> l) {
     if (name.removedDoubleSpaces != name) {
       print('checkIsNotContainDoubleSpaces() `$name`');
       return false;
+    }
+  }
+
+  return true;
+}
+
+bool checkIsAnyNewWordStartsWIthCapitalLetter(List<String> l) {
+  for (final name in l) {
+    final words = name.split(' ');
+    for (final word in words) {
+      if (word.toUpperCaseFirtsLetter != word) {
+        print('checkIsAnyNewWordStartsWIthCapitalLetter() `$name`');
+        return false;
+      }
     }
   }
 
