@@ -1,5 +1,6 @@
 import 'supported_language.dart';
 import 'planets/planet_names.dart' as planet;
+import 'stars/stars_names.dart' as stars;
 import 'volcanos/volcano_names.dart' as volcano;
 
 class Names {
@@ -22,6 +23,16 @@ class Names {
       Names(
         planet.title[lc]!,
         planet.names[lc]!,
+        randomize: randomize,
+      );
+
+  factory Names.stars({
+    SupportedLanguage lc = SupportedLanguage.english,
+    bool randomize = true,
+  }) =>
+      Names(
+        stars.title[lc]!,
+        stars.names[lc]!,
         randomize: randomize,
       );
 
