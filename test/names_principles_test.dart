@@ -1,3 +1,4 @@
+import 'package:dart_helpers/dart_helpers.dart';
 import 'package:names/names.dart';
 import 'package:test/test.dart';
 
@@ -14,7 +15,17 @@ void main() {
 
     test('Principle 3: Names does not contain numbers.', () {
       final all = Names.volcanos(randomize: false).all;
-      expect(checkIsNotContainNumber(all), true);
+      expect(checkIsNotContainNumbers(all), true);
+    });
+
+    test('Principle 4: Names does not contain trailing spaces.', () {
+      final all = Names.volcanos(randomize: false).all;
+      expect(checkIsNotContainTrailingSpaces(all), true);
+    });
+
+    test('Principle 5: Names does not contain double spaces.', () {
+      final all = Names.volcanos(randomize: false).all;
+      expect(checkIsNotContainDoubleSpaces(all), true);
     });
   });
 }
@@ -40,10 +51,32 @@ bool checkIsSorted(List<String> l) {
   return true;
 }
 
-bool checkIsNotContainNumber(List<String> l) {
+bool checkIsNotContainNumbers(List<String> l) {
   for (final name in l) {
     if (name.contains(RegExp(r'[0123456789]'))) {
-      print('checkIsNotContainNumber() `$name`');
+      print('checkIsNotContainNumbers() `$name`');
+      return false;
+    }
+  }
+
+  return true;
+}
+
+bool checkIsNotContainTrailingSpaces(List<String> l) {
+  for (final name in l) {
+    if (name.trim() != name) {
+      print('checkIsNotContainTrailingSpaces() `$name`');
+      return false;
+    }
+  }
+
+  return true;
+}
+
+bool checkIsNotContainDoubleSpaces(List<String> l) {
+  for (final name in l) {
+    if (name.removedDoubleSpaces != name) {
+      print('checkIsNotContainDoubleSpaces() `$name`');
       return false;
     }
   }

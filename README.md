@@ -15,3 +15,7 @@ Can generate **infinity** stream of names with adding number to name every loop.
 2. All names for initialize class `Names` ordered by abc.
 
 3. Names does not contain numbers.
+
+4. Names does not contain trailing spaces.
+
+5. Names does not contain double spaces.

@@ -747,7 +747,7 @@ const Set<String> en = <String>{
   'Pyrax',
   'Pyraxis',
   'Pyre',
-  'Pyrelight ',
+  'Pyrelight',
   'Pyrestone',
   'Pyrethrum',
   'Pyretide',
