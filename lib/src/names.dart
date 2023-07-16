@@ -5,11 +5,12 @@ class Names {
   final String title;
   final List<String> data;
 
-  Names(this.title, this.data, {bool randomize = true})
+  Names(this.title, Set<String> data, {bool randomize = true})
       : assert(title.isNotEmpty, 'The title of names should be set.'),
-        assert(data.isNotEmpty, 'The list of names should be not empty.') {
+        assert(data.isNotEmpty, 'The list of names should be not empty.'),
+        data = data.toList() {
     if (randomize) {
-      data.shuffle();
+      this.data.shuffle();
     }
   }
 
@@ -17,7 +18,11 @@ class Names {
     SupportedLanguage lc = SupportedLanguage.english,
     bool randomize = true,
   }) =>
-      Names(volcano.title[lc]!, volcano.names[lc]!.toList());
+      Names(
+        volcano.title[lc]!,
+        volcano.names[lc]!,
+        randomize: randomize,
+      );
 
   List<String> get all => data;
 
