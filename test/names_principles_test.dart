@@ -3,34 +3,43 @@ import 'package:names/names.dart';
 import 'package:test/test.dart';
 
 void main() {
+  final planets = Names.planets(randomize: false);
   final volcanos = Names.volcanos(randomize: false);
 
   group('Names compliance with the principles. See README.md.', () {
     test('Principle 1: Every set of names contains exactly 1000 names.', () {
-      expect(volcanos.count, 1000);
+      const count = 1000;
+      expect(planets.count, count);
+      expect(volcanos.count, count);
     });
 
     test('Principle 2: All names for initialize `Names` ordered by abc.', () {
+      expect(checkIsSorted(planets.all), true);
       expect(checkIsSorted(volcanos.all), true);
     });
 
     test('Principle 3: Names does not contain numbers.', () {
+      expect(checkIsNotContainNumbers(planets.all), true);
       expect(checkIsNotContainNumbers(volcanos.all), true);
     });
 
     test('Principle 4: Names does not contain trailing spaces.', () {
+      expect(checkIsNotContainTrailingSpaces(planets.all), true);
       expect(checkIsNotContainTrailingSpaces(volcanos.all), true);
     });
 
     test('Principle 5: Names does not contain double spaces.', () {
+      expect(checkIsNotContainDoubleSpaces(planets.all), true);
       expect(checkIsNotContainDoubleSpaces(volcanos.all), true);
     });
 
     test('Principle 6: Any new word in name starts with capital letter.', () {
+      expect(checkIsAnyNewWordStartsWIthCapitalLetter(planets.all), true);
       expect(checkIsAnyNewWordStartsWIthCapitalLetter(volcanos.all), true);
     });
 
     test('Principle 7: Names contains only accepted abc in language.', () {
+      expect(checkIsContainsOnlyAcceptedAbcInLanguage(planets.all), true);
       expect(checkIsContainsOnlyAcceptedAbcInLanguage(volcanos.all), true);
     });
   });
@@ -106,9 +115,12 @@ bool checkIsAnyNewWordStartsWIthCapitalLetter(List<String> l) {
 
 bool checkIsContainsOnlyAcceptedAbcInLanguage(List<String> l) {
   for (final name in l) {
-    if (name.contains(acceptedLanguageSymbols[SupportedLanguage.english]!)) {
-      print('checkIsContainsOnlyAcceptedAbcInLanguage() `$name`');
-      return false;
+    final words = name.split(' ');
+    for (final word in words) {
+      if (word.contains(acceptedLanguageSymbols[SupportedLanguage.english]!)) {
+        print('checkIsContainsOnlyAcceptedAbcInLanguage() `$name`');
+        return false;
+      }
     }
   }
 

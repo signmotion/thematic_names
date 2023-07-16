@@ -1,4 +1,5 @@
 import 'supported_language.dart';
+import 'planets/planet_names.dart' as planet;
 import 'volcanos/volcano_names.dart' as volcano;
 
 class Names {
@@ -13,6 +14,16 @@ class Names {
       this.data.shuffle();
     }
   }
+
+  factory Names.planets({
+    SupportedLanguage lc = SupportedLanguage.english,
+    bool randomize = true,
+  }) =>
+      Names(
+        planet.title[lc]!,
+        planet.names[lc]!,
+        randomize: randomize,
+      );
 
   factory Names.volcanos({
     SupportedLanguage lc = SupportedLanguage.english,

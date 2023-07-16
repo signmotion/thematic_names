@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   group('Names', () {
-    test('Loop by volcano names', () {
+    test('Loop by volcano names, all other names works same', () {
       final names = Names.volcanos();
 
       for (int i = 0; i < names.count; ++i) {
