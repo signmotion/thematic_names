@@ -3,34 +3,31 @@ import 'package:names/names.dart';
 import 'package:test/test.dart';
 
 void main() {
+  final volcanos = Names.volcanos(randomize: false);
+
   group('Names compliance with the principles. See README.md.', () {
     test('Principle 1: Every set of names contains exactly 1000 names.', () {
-      expect(Names.volcanos().count, 1000);
+      expect(volcanos.count, 1000);
     });
 
     test('Principle 2: All names for initialize `Names` ordered by abc.', () {
-      final all = Names.volcanos(randomize: false).all;
-      expect(checkIsSorted(all), true);
+      expect(checkIsSorted(volcanos.all), true);
     });
 
     test('Principle 3: Names does not contain numbers.', () {
-      final all = Names.volcanos(randomize: false).all;
-      expect(checkIsNotContainNumbers(all), true);
+      expect(checkIsNotContainNumbers(volcanos.all), true);
     });
 
     test('Principle 4: Names does not contain trailing spaces.', () {
-      final all = Names.volcanos(randomize: false).all;
-      expect(checkIsNotContainTrailingSpaces(all), true);
+      expect(checkIsNotContainTrailingSpaces(volcanos.all), true);
     });
 
     test('Principle 5: Names does not contain double spaces.', () {
-      final all = Names.volcanos(randomize: false).all;
-      expect(checkIsNotContainDoubleSpaces(all), true);
+      expect(checkIsNotContainDoubleSpaces(volcanos.all), true);
     });
 
     test('Principle 6: Any new word in name starts with capital letter.', () {
-      final all = Names.volcanos(randomize: false).all;
-      expect(checkIsAnyNewWordStartsWIthCapitalLetter(all), true);
+      expect(checkIsAnyNewWordStartsWIthCapitalLetter(volcanos.all), true);
     });
   });
 }
