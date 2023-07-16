@@ -20,31 +20,19 @@ class Names {
     SupportedLanguage lc = SupportedLanguage.english,
     bool randomize = true,
   }) =>
-      Names(
-        planet.title[lc]!,
-        planet.names[lc]!,
-        randomize: randomize,
-      );
+      Names(planet.title[lc]!, planet.names[lc]!, randomize: randomize);
 
   factory Names.stars({
     SupportedLanguage lc = SupportedLanguage.english,
     bool randomize = true,
   }) =>
-      Names(
-        stars.title[lc]!,
-        stars.names[lc]!,
-        randomize: randomize,
-      );
+      Names(stars.title[lc]!, stars.names[lc]!, randomize: randomize);
 
   factory Names.volcanos({
     SupportedLanguage lc = SupportedLanguage.english,
     bool randomize = true,
   }) =>
-      Names(
-        volcano.title[lc]!,
-        volcano.names[lc]!,
-        randomize: randomize,
-      );
+      Names(volcano.title[lc]!, volcano.names[lc]!, randomize: randomize);
 
   List<String> get all => data;
 
