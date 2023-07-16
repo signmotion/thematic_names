@@ -21,3 +21,5 @@ Can generate **infinity** stream of names with adding number to name every loop.
 5. Names does not contain double spaces.
 
 6. Any new word in name starts with capital letter.
+
+7. Names contains only accepted abc in language.

@@ -29,6 +29,10 @@ void main() {
     test('Principle 6: Any new word in name starts with capital letter.', () {
       expect(checkIsAnyNewWordStartsWIthCapitalLetter(volcanos.all), true);
     });
+
+    test('Principle 7: Names contains only accepted abc in language.', () {
+      expect(checkIsContainsOnlyAcceptedAbcInLanguage(volcanos.all), true);
+    });
   });
 }
 
@@ -94,6 +98,17 @@ bool checkIsAnyNewWordStartsWIthCapitalLetter(List<String> l) {
         print('checkIsAnyNewWordStartsWIthCapitalLetter() `$name`');
         return false;
       }
+    }
+  }
+
+  return true;
+}
+
+bool checkIsContainsOnlyAcceptedAbcInLanguage(List<String> l) {
+  for (final name in l) {
+    if (name.contains(acceptedLanguageSymbols[SupportedLanguage.english]!)) {
+      print('checkIsContainsOnlyAcceptedAbcInLanguage() `$name`');
+      return false;
     }
   }
 
