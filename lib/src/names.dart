@@ -56,8 +56,12 @@ class Names {
     return loop == 0 ? r : '$r $loop';
   }
 
+  String get first => data.first;
+
+  String get last => data.last;
+
   // Current index.
-  int i = -1;
+  int i = 0;
 
   // How many times did you go through the all names.
   int loop = 0;
