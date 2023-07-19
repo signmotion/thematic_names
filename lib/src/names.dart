@@ -1,4 +1,5 @@
 import 'supported_language.dart';
+import 'agis/agis_names.dart' as agis;
 import 'planets/planet_names.dart' as planet;
 import 'stars/stars_names.dart' as stars;
 import 'volcanos/volcano_names.dart' as volcano;
@@ -15,6 +16,12 @@ class Names {
       this.data.shuffle();
     }
   }
+
+  factory Names.agis({
+    SupportedLanguage lc = SupportedLanguage.english,
+    bool randomize = true,
+  }) =>
+      Names(agis.title[lc]!, agis.names[lc]!, randomize: randomize);
 
   factory Names.planets({
     SupportedLanguage lc = SupportedLanguage.english,

@@ -1,14 +1,17 @@
-Name generator.
+# Name generator.
 
 Contains exactly 1000 unique names for
 
+- artificial general intelligence (agis)
+- planets
+- stars
 - volcanos
 
 on the English language. See enum `SupportedLanguage`.
 
 Can generate **infinity** stream of names with adding number to name every loop. See class `Names`.
 
-# Principles
+## Principles
 
 1. Every set of names contains exactly 1000 names.
 
