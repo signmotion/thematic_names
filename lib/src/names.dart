@@ -58,17 +58,21 @@ class Names {
 
   /// Current name.
   String get current {
+    if (i == -1) {
+      next;
+    }
+
     final r = data[i];
 
     return loop == 0 ? r : '$r $loop';
   }
 
-  String get first => data.first;
+  String get firstFromAll => data.first;
 
-  String get last => data.last;
+  String get lastFromAll => data.last;
 
   // Current index.
-  int i = 0;
+  int i = -1;
 
   // How many times did you go through the all names.
   int loop = 0;
