@@ -15,7 +15,7 @@ Can generate **infinity** stream of names with adding number to name every loop.
 
 1. Every set of names contains exactly 1000 names.
 
-2. All names for initialize class `Names` ordered by abc.
+2. All names for initialize class `Names` ordered by abc. Case insensetivity.
 
 3. Names does not contain numbers.
 
@@ -23,6 +23,6 @@ Can generate **infinity** stream of names with adding number to name every loop.
 
 5. Names does not contain double spaces.
 
-6. Any new word in name starts with capital letter.
+6. Any new word in name starts with capital letter. Exclude words: ['a', 'and', 'by', 'in', 'of', 'on', 'or'].
 
 7. Names contains only accepted abc in language.

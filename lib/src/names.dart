@@ -1,8 +1,11 @@
 import 'supported_language.dart';
 import 'agis/agis_names.dart' as agis;
+import 'bakeries/bakeries_names.dart' as bakeries;
 import 'planets/planet_names.dart' as planet;
 import 'stars/stars_names.dart' as stars;
 import 'volcanos/volcano_names.dart' as volcano;
+
+typedef SL = SupportedLanguage;
 
 class Names {
   final String title;
@@ -17,28 +20,19 @@ class Names {
     }
   }
 
-  factory Names.agis({
-    SupportedLanguage lc = SupportedLanguage.english,
-    bool randomize = true,
-  }) =>
+  factory Names.agis({SL lc = SL.english, bool randomize = true}) =>
       Names(agis.title[lc]!, agis.names[lc]!, randomize: randomize);
 
-  factory Names.planets({
-    SupportedLanguage lc = SupportedLanguage.english,
-    bool randomize = true,
-  }) =>
+  factory Names.bakeries({SL lc = SL.english, bool randomize = true}) =>
+      Names(bakeries.title[lc]!, bakeries.names[lc]!, randomize: randomize);
+
+  factory Names.planets({SL lc = SL.english, bool randomize = true}) =>
       Names(planet.title[lc]!, planet.names[lc]!, randomize: randomize);
 
-  factory Names.stars({
-    SupportedLanguage lc = SupportedLanguage.english,
-    bool randomize = true,
-  }) =>
+  factory Names.stars({SL lc = SL.english, bool randomize = true}) =>
       Names(stars.title[lc]!, stars.names[lc]!, randomize: randomize);
 
-  factory Names.volcanos({
-    SupportedLanguage lc = SupportedLanguage.english,
-    bool randomize = true,
-  }) =>
+  factory Names.volcanos({SL lc = SL.english, bool randomize = true}) =>
       Names(volcano.title[lc]!, volcano.names[lc]!, randomize: randomize);
 
   List<String> get all => data;
