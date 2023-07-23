@@ -1,9 +1,9 @@
 import 'supported_language.dart';
-import 'agis/agis_names.dart' as agis;
-import 'bakeries/bakeries_names.dart' as bakeries;
-import 'planets/planet_names.dart' as planet;
-import 'stars/stars_names.dart' as stars;
-import 'volcanos/volcano_names.dart' as volcano;
+import 'agis/names.dart' as agis;
+import 'bakeries/names.dart' as bakeries;
+import 'planets/names.dart' as planet;
+import 'stars/names.dart' as stars;
+import 'volcanos/names.dart' as volcano;
 
 typedef SL = SupportedLanguage;
 
