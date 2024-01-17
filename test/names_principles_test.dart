@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:dart_helpers/dart_helpers.dart';
 import 'package:names/names.dart';
 import 'package:test/test.dart';

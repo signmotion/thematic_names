@@ -6,9 +6,6 @@ import 'stars/names.dart' as stars;
 import 'volcanos/names.dart' as volcano;
 
 class Names {
-  final String title;
-  final List<String> data;
-
   Names(this.title, Set<String> data, {bool randomize = true})
       : assert(title.isNotEmpty, 'The title of names should be set.'),
         assert(data.isNotEmpty, 'The list of names should be not empty.'),
@@ -67,6 +64,9 @@ class Names {
         volcano.names[languageCode]!,
         randomize: randomize,
       );
+
+  final String title;
+  final List<String> data;
 
   List<String> get all => data;
 

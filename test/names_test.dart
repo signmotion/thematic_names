@@ -25,7 +25,7 @@ void main() {
     test('Loop by names, all names works same', () {
       final names = Names.volcanos();
 
-      for (int i = 0; i < names.count; ++i) {
+      for (var i = 0; i < names.count; ++i) {
         expect(names.next, isNotEmpty);
       }
 

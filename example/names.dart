@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:names/names.dart';
 
 void main() {
