@@ -1,5 +1,5 @@
-import 'package:names/names.dart';
 import 'package:test/test.dart';
+import 'package:thematic_names/thematic_names.dart';
 
 void main() {
   group('Names', () {

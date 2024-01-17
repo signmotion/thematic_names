@@ -2,7 +2,7 @@
 
 This package generates an **infinite** number of **thematic unique** names.
 
-![Cover - Names](https://raw.githubusercontent.com/signmotion/names/master/images/cover.webp)
+![Cover - Names](https://raw.githubusercontent.com/signmotion/thematic_names/master/images/cover.webp)
 
 ## Features
 
@@ -17,12 +17,12 @@ Contains exactly 1000 unique names for
 on the English language (now). You can easily add your own language.
 See enum `SupportedLanguage`.
 
-To generate unique names, the name generator `Names` adds a number to the name each time
+To generate unique names, the name generator `ThematicNames` adds a number to the name each time
 it reaches 1000 names.
 
 ## Examples
 
-Get a set of 1000 unique volcano names:
+Get a set of base 1000 unique volcano names:
 
 ```dart
 final names = Names.volcanos();

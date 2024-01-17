@@ -1,7 +1,13 @@
-name: names
-description: A starting point for Dart libraries or applications.
+name: thematic_names
+description: The package generates an infinite number of thematic unique names.
+homepage: https://github.com/signmotion/thematic_names.git
+
+# Format:
+#   version: major.minor.patch
+# You can calculate the number version code by this formula:
+#   code = m[A]jor * 100 * 100 + m[I]nor * 100 + [P]atch
+# Otherwise: +AAIIPP
 version: 0.1.0
-publish_to: none
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

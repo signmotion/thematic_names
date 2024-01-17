@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_print
 
-import 'package:names/names.dart';
+import 'package:thematic_names/thematic_names.dart';
 
 void main() {
   // get a set of 1000 unique volcano names
