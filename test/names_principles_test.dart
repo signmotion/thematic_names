@@ -7,72 +7,76 @@ import 'package:thematic_names/thematic_names.dart';
 import 'helpers/string_ext.dart';
 
 void main() {
-  final agis = Names.agis(randomize: false);
-  final bakeries = Names.bakeries(randomize: false);
-  final planets = Names.planets(randomize: false);
-  final stars = Names.stars(randomize: false);
-  final volcanos = Names.volcanos(randomize: false);
+  final list = <Names>[
+    Names.agis(randomize: false),
+    Names.bakeries(randomize: false),
+    Names.planets(randomize: false),
+    Names.stars(randomize: false),
+    Names.volcanos(randomize: false),
+  ];
 
   group('Names compliance with the principles. See README.md.', () {
     test('Principle 1: Every set of names contains exactly 1000 names.', () {
       const count = 1000;
-      expect(agis.count, count);
-      expect(bakeries.count, count);
-      expect(planets.count, count);
-      expect(stars.count, count);
-      expect(volcanos.count, count);
+      for (final names in list) {
+        expect(names.count, count, reason: names.title);
+      }
     });
 
     test(
         'Principle 2: All names for initialize `Names` ordered by abc.'
         'Case insensetivity.', () {
-      expect(checkIsSorted(agis.all), true);
-      expect(checkIsSorted(bakeries.all), true);
-      expect(checkIsSorted(planets.all), true);
-      expect(checkIsSorted(stars.all), true);
-      expect(checkIsSorted(volcanos.all), true);
+      for (final names in list) {
+        expect(checkIsSorted(names.all), true, reason: names.title);
+      }
     });
 
     test('Principle 3: Names does not contain numbers.', () {
-      expect(checkIsNotContainNumbers(agis.all), true);
-      expect(checkIsNotContainNumbers(bakeries.all), true);
-      expect(checkIsNotContainNumbers(planets.all), true);
-      expect(checkIsNotContainNumbers(stars.all), true);
-      expect(checkIsNotContainNumbers(volcanos.all), true);
+      for (final names in list) {
+        expect(checkIsNotContainNumbers(names.all), true, reason: names.title);
+      }
     });
 
     test('Principle 4: Names does not contain trailing spaces.', () {
-      expect(checkIsNotContainTrailingSpaces(agis.all), true);
-      expect(checkIsNotContainTrailingSpaces(bakeries.all), true);
-      expect(checkIsNotContainTrailingSpaces(planets.all), true);
-      expect(checkIsNotContainTrailingSpaces(stars.all), true);
-      expect(checkIsNotContainTrailingSpaces(volcanos.all), true);
+      for (final names in list) {
+        expect(
+          checkIsNotContainTrailingSpaces(names.all),
+          true,
+          reason: names.title,
+        );
+      }
     });
 
     test('Principle 5: Names does not contain double spaces.', () {
-      expect(checkIsNotContainDoubleSpaces(agis.all), true);
-      expect(checkIsNotContainDoubleSpaces(bakeries.all), true);
-      expect(checkIsNotContainDoubleSpaces(planets.all), true);
-      expect(checkIsNotContainDoubleSpaces(stars.all), true);
-      expect(checkIsNotContainDoubleSpaces(volcanos.all), true);
+      for (final names in list) {
+        expect(
+          checkIsNotContainDoubleSpaces(names.all),
+          true,
+          reason: names.title,
+        );
+      }
     });
 
     test(
         'Principle 6: Any new word in name starts with capital letter.'
         'But we have some exclude words.', () {
-      expect(checkIsAnyNewWordStartsWIthCapitalLetter(agis.all), true);
-      expect(checkIsAnyNewWordStartsWIthCapitalLetter(bakeries.all), true);
-      expect(checkIsAnyNewWordStartsWIthCapitalLetter(planets.all), true);
-      expect(checkIsAnyNewWordStartsWIthCapitalLetter(stars.all), true);
-      expect(checkIsAnyNewWordStartsWIthCapitalLetter(volcanos.all), true);
+      for (final names in list) {
+        expect(
+          checkIsAnyNewWordStartsWIthCapitalLetter(names.all),
+          true,
+          reason: names.title,
+        );
+      }
     });
 
     test('Principle 7: Names contains only accepted abc in language.', () {
-      expect(checkIsContainsOnlyAcceptedAbcInLanguage(agis.all), true);
-      expect(checkIsContainsOnlyAcceptedAbcInLanguage(bakeries.all), true);
-      expect(checkIsContainsOnlyAcceptedAbcInLanguage(planets.all), true);
-      expect(checkIsContainsOnlyAcceptedAbcInLanguage(stars.all), true);
-      expect(checkIsContainsOnlyAcceptedAbcInLanguage(volcanos.all), true);
+      for (final names in list) {
+        expect(
+          checkIsContainsOnlyAcceptedAbcInLanguage(names.all),
+          true,
+          reason: names.title,
+        );
+      }
     });
   });
 }
