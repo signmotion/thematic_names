@@ -1,8 +1,10 @@
 // ignore_for_file: avoid_print
 
-import 'package:dart_helpers/dart_helpers.dart';
+import 'package:strings/strings.dart';
 import 'package:test/test.dart';
 import 'package:thematic_names/thematic_names.dart';
+
+import 'helpers/string_ext.dart';
 
 void main() {
   final agis = Names.agis(randomize: false);
@@ -134,7 +136,7 @@ bool checkIsAnyNewWordStartsWIthCapitalLetter(List<String> l) {
   for (final name in l) {
     final words = name.split(' ');
     for (final word in words) {
-      if (word.toUpperCaseFirtsLetter != word && !excludes.contains(word)) {
+      if (word.toCapitalised() != word && !excludes.contains(word)) {
         print('checkIsAnyNewWordStartsWIthCapitalLetter() `$name`');
         return false;
       }
