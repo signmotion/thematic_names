@@ -81,21 +81,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.3"
-  dart_helpers:
-    dependency: "direct main"
-    description:
-      path: "../dart_helpers"
-      relative: true
-    source: path
-    version: "0.1.0"
-  equatable:
-    dependency: transitive
-    description:
-      name: equatable
-      sha256: c2b87cb7756efdf69892005af546c56c0b5037f54d2a88269b4f347a505e3ca2
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.5"
   file:
     dependency: transitive
     description:
@@ -329,13 +314,13 @@ packages:
     source: hosted
     version: "1.2.0"
   strings:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: strings
-      sha256: "074ee21f17a17bb907af60e5b9e7494cd53bba0bf9d73599892c787a0c172a42"
+      sha256: "1f3db7347b8dfd9844ee7fb34883cffbe6cc723a63cb9f4a0aa19e619304b030"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.3"
+    version: "3.0.0"
   term_glyph:
     dependency: transitive
     description:
@@ -384,14 +369,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.3.1"
-  vector_math:
-    dependency: transitive
-    description:
-      name: vector_math
-      sha256: "80b3257d1492ce4d091729e3a67a60407d227c27241d6927be0130c98e741803"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.4"
   vm_service:
     dependency: transitive
     description:
@@ -433,4 +410,4 @@ packages:
     source: hosted
     version: "3.1.2"
 sdks:
-  dart: ">=3.2.4 <4.0.0"
+  dart: ">=3.0.0 <4.0.0"
