@@ -1,17 +1,48 @@
-# Name generator.
+# Name Generator
+
+This package generates an **infinite** number of **unique thematic** names.
+
+## Features
 
 Contains exactly 1000 unique names for
 
-- artificial general intelligence (agis)
+- artificial general intelligence (AGIs) -> `Names.
+- bakeries
 - planets
 - stars
 - volcanos
 
-on the English language. See enum `SupportedLanguage`.
+on the English language (now). You can easily add your own language.
+See enum `SupportedLanguage`.
 
-Can generate **infinity** stream of names with adding number to name every loop. See class `Names`.
+To generate unique names, `NameGenerator` adds a number to the name each time
+it reaches 1000 names.
+
+## Examples
+
+Get a set of 1000 unique volcano names:
+
+```dart
+final names = Names.volcanos();
+```
+
+Output all available thematic names:
+
+```dart
+print(names);
+```
+
+Generate 4 names:
+
+```dart
+for (var i = 0; i < 4; ++i) {
+  print(names.next);
+}
+```
 
 ## Principles
+
+These rules are enforced for each set of names.
 
 1. Every set of names contains exactly 1000 names.
 
@@ -26,3 +57,13 @@ Can generate **infinity** stream of names with adding number to name every loop.
 6. Any new word in name starts with capital letter. Exclude words: ['a', 'and', 'by', 'in', 'of', 'on', 'or'].
 
 7. Names contains only accepted abc in language.
+
+## Welcome
+
+Welcome to add your own sets of 1000 unique names for... anything on any language)
+
+When you create your own nameset, please, include it in the `names_principles_test.dart` file.
+
+## TODO
+
+- Example with external own set of names.
