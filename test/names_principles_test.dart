@@ -6,15 +6,15 @@ import 'package:thematic_names/thematic_names.dart';
 
 import 'helpers/string_ext.dart';
 
-void main() {
-  final list = <Names>[
-    Names.agis(randomize: false),
-    Names.bakeries(randomize: false),
-    Names.planets(randomize: false),
-    Names.stars(randomize: false),
-    Names.volcanos(randomize: false),
-  ];
+final list = <Names>[
+  Names.agis(randomize: false),
+  Names.bakeries(randomize: false),
+  Names.planets(randomize: false),
+  Names.stars(randomize: false),
+  Names.volcanos(randomize: false),
+];
 
+void main() {
   group('Names compliance with the principles. See README.md.', () {
     test('Principle 1: Every set of names contains exactly 1000 names.', () {
       const count = 1000;
@@ -25,60 +25,32 @@ void main() {
 
     test(
         'Principle 2: All names for initialize `Names` ordered by abc.'
-        'Case insensetivity.', () {
-      for (final names in list) {
-        expect(checkIsSorted(names.all), true, reason: names.title);
-      }
-    });
+        'Case insensetivity.',
+        () => checkAllNames(checkIsSorted));
 
-    test('Principle 3: Names does not contain numbers.', () {
-      for (final names in list) {
-        expect(checkIsNotContainNumbers(names.all), true, reason: names.title);
-      }
-    });
+    test('Principle 3: Names does not contain numbers.',
+        () => checkAllNames(checkIsNotContainNumbers));
 
-    test('Principle 4: Names does not contain trailing spaces.', () {
-      for (final names in list) {
-        expect(
-          checkIsNotContainTrailingSpaces(names.all),
-          true,
-          reason: names.title,
-        );
-      }
-    });
+    test('Principle 4: Names does not contain trailing spaces.',
+        () => checkAllNames(checkIsNotContainTrailingSpaces));
 
-    test('Principle 5: Names does not contain double spaces.', () {
-      for (final names in list) {
-        expect(
-          checkIsNotContainDoubleSpaces(names.all),
-          true,
-          reason: names.title,
-        );
-      }
-    });
+    test('Principle 5: Names does not contain double spaces.',
+        () => checkAllNames(checkIsNotContainDoubleSpaces));
 
     test(
         'Principle 6: Any new word in name starts with capital letter.'
-        'But we have some exclude words.', () {
-      for (final names in list) {
-        expect(
-          checkIsAnyNewWordStartsWIthCapitalLetter(names.all),
-          true,
-          reason: names.title,
-        );
-      }
-    });
+        'But we have some exclude words.',
+        () => checkAllNames(checkIsAnyNewWordStartsWIthCapitalLetter));
 
-    test('Principle 7: Names contains only accepted abc in language.', () {
-      for (final names in list) {
-        expect(
-          checkIsContainsOnlyAcceptedAbcInLanguage(names.all),
-          true,
-          reason: names.title,
-        );
-      }
-    });
+    test('Principle 7: Names contains only accepted abc in language.',
+        () => checkAllNames(checkIsContainsOnlyAcceptedAbcInLanguage));
   });
+}
+
+void checkAllNames(bool Function(List<String>) checker) {
+  for (final names in list) {
+    expect(checker(names.all), true, reason: names.title);
+  }
 }
 
 /// \source Package `collection`, method `isSorted()`.
