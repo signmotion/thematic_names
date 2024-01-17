@@ -46,19 +46,19 @@ for (var i = 0; i < 4; ++i) {
 
 These rules are enforced for each set of names.
 
-1. Every set of names contains exactly 1000 names.
+1. Every set of names contains exactly 1000 unique thematic names.
 
 2. All names for initialize class `Names` ordered by abc. Case insensetivity.
 
-3. Names does not contain numbers.
+3. Names doesn't contain numbers.
 
-4. Names does not contain trailing spaces.
+4. Names doesn't contain trailing spaces.
 
-5. Names does not contain double spaces.
+5. Names doesn't contain double spaces.
 
 6. Any new word in name starts with capital letter. Exclude words: ['a', 'and', 'by', 'in', 'of', 'on', 'or'].
 
-7. Names contains only accepted abc in language.
+7. Names contains only accepted abc in the language.
 
 ## Welcome
 
