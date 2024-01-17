@@ -5,8 +5,6 @@ import 'planets/names.dart' as planet;
 import 'stars/names.dart' as stars;
 import 'volcanos/names.dart' as volcano;
 
-typedef SL = SupportedLanguage;
-
 class Names {
   final String title;
   final List<String> data;
@@ -20,20 +18,55 @@ class Names {
     }
   }
 
-  factory Names.agis({SL lc = SL.english, bool randomize = true}) =>
-      Names(agis.title[lc]!, agis.names[lc]!, randomize: randomize);
+  factory Names.agis({
+    SupportedLanguage languageCode = SupportedLanguage.english,
+    bool randomize = true,
+  }) =>
+      Names(
+        agis.title[languageCode]!,
+        agis.names[languageCode]!,
+        randomize: randomize,
+      );
 
-  factory Names.bakeries({SL lc = SL.english, bool randomize = true}) =>
-      Names(bakeries.title[lc]!, bakeries.names[lc]!, randomize: randomize);
+  factory Names.bakeries({
+    SupportedLanguage languageCode = SupportedLanguage.english,
+    bool randomize = true,
+  }) =>
+      Names(
+        bakeries.title[languageCode]!,
+        bakeries.names[languageCode]!,
+        randomize: randomize,
+      );
 
-  factory Names.planets({SL lc = SL.english, bool randomize = true}) =>
-      Names(planet.title[lc]!, planet.names[lc]!, randomize: randomize);
+  factory Names.planets({
+    SupportedLanguage languageCode = SupportedLanguage.english,
+    bool randomize = true,
+  }) =>
+      Names(
+        planet.title[languageCode]!,
+        planet.names[languageCode]!,
+        randomize: randomize,
+      );
 
-  factory Names.stars({SL lc = SL.english, bool randomize = true}) =>
-      Names(stars.title[lc]!, stars.names[lc]!, randomize: randomize);
+  factory Names.stars({
+    SupportedLanguage languageCode = SupportedLanguage.english,
+    bool randomize = true,
+  }) =>
+      Names(
+        stars.title[languageCode]!,
+        stars.names[languageCode]!,
+        randomize: randomize,
+      );
 
-  factory Names.volcanos({SL lc = SL.english, bool randomize = true}) =>
-      Names(volcano.title[lc]!, volcano.names[lc]!, randomize: randomize);
+  factory Names.volcanos({
+    SupportedLanguage languageCode = SupportedLanguage.english,
+    bool randomize = true,
+  }) =>
+      Names(
+        volcano.title[languageCode]!,
+        volcano.names[languageCode]!,
+        randomize: randomize,
+      );
 
   List<String> get all => data;
 
@@ -72,5 +105,5 @@ class Names {
   int loop = 0;
 
   @override
-  String toString() => all.join(', ');
+  String toString() => '$title: ${all.join(", ")}';
 }
