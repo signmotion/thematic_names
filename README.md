@@ -1,18 +1,19 @@
 # Thematic Unique Name Generator
 
-This package generates an **infinite** number of **thematic unique** names.
-
 ![Cover - Names](https://raw.githubusercontent.com/signmotion/thematic_names/master/images/cover.webp)
+
+Generate an **infinite** number of **thematic calibrated unique** names.
+Well-tested Dart package.
 
 ## Features
 
-Contains exactly 1000 unique names for
+Contains exactly 1000 unique, calibrated (see the Principles below) names for
 
-- artificial general intelligence (AGIs) -> `Names.agis()`
-- bakeries -> `Names.bakeries()`
-- planets -> `Names.planets()`
-- stars -> `Names.stars()`
-- volcanos -> `Names.volcanos()`
+- artificial general intelligence (AGIs) `Names.agis()`
+- bakeries `Names.bakeries()`
+- planets `Names.planets()`
+- stars `Names.stars()`
+- volcanos `Names.volcanos()`
 
 on the English language (now). You can easily add your own language.
 See enum `SupportedLanguage`.
@@ -20,21 +21,21 @@ See enum `SupportedLanguage`.
 To generate unique names, the name generator `ThematicNames` adds a number to the name each time
 it reaches 1000 names.
 
-## Examples
+## Usage
 
-Get a set of base 1000 unique volcano names:
+### Get a set of base 1000 unique volcano names
 
 ```dart
 final names = Names.volcanos();
 ```
 
-Output all available thematic names:
+### Output all available thematic names
 
 ```dart
 print(names);
 ```
 
-Generate 4 names:
+### Generate 4 names
 
 ```dart
 for (var i = 0; i < 4; ++i) {
@@ -65,6 +66,10 @@ These rules are enforced for each set of names.
 Welcome to add your own sets of 1000 unique names for... anything on any language)
 
 When you create your own nameset, please, include it in the `names_principles_test.dart` file.
+
+## License
+
+[MIT](LICENSE)
 
 ## TODO
 
