@@ -1,6 +1,13 @@
 name: thematic_names
-description: The package generates an infinite number of thematic unique names.
-homepage: https://github.com/signmotion/thematic_names.git
+description: The package generates an infinite number of thematic calibrated unique names.
+repository: https://github.com/signmotion/thematic_names.git
+
+topics:
+  - generator
+  - names-generator
+  - random
+  - rpg
+  - games
 
 # Format:
 #   version: major.minor.patch
@@ -16,4 +23,4 @@ dev_dependencies:
   json_annotation: ^4.8.1
   lints: ^3.0.0
   strings: ^3.0.0
-  test: ^1.25.1
+  test: ^1.25.2
