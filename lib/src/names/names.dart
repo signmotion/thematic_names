@@ -5,6 +5,7 @@ import 'planets/names.dart' as planet;
 import 'stars/names.dart' as stars;
 import 'volcanos/names.dart' as volcano;
 
+/// Entrance point for generate names.
 class Names {
   Names(this.title, Set<String> data, {bool randomize = true})
       : assert(title.isNotEmpty, 'The title of names should be set.'),
@@ -15,6 +16,7 @@ class Names {
     }
   }
 
+  /// Generate names for artificial general intelligence (AGIs).
   factory Names.agis({
     SupportedLanguage languageCode = SupportedLanguage.english,
     bool randomize = true,
@@ -25,6 +27,7 @@ class Names {
         randomize: randomize,
       );
 
+  /// Generate names for bakeries.
   factory Names.bakeries({
     SupportedLanguage languageCode = SupportedLanguage.english,
     bool randomize = true,
@@ -35,6 +38,7 @@ class Names {
         randomize: randomize,
       );
 
+  /// Generate names for planets.
   factory Names.planets({
     SupportedLanguage languageCode = SupportedLanguage.english,
     bool randomize = true,
@@ -45,6 +49,7 @@ class Names {
         randomize: randomize,
       );
 
+  /// Generate names for stars.
   factory Names.stars({
     SupportedLanguage languageCode = SupportedLanguage.english,
     bool randomize = true,
@@ -55,6 +60,7 @@ class Names {
         randomize: randomize,
       );
 
+  /// Generate names for volcanos.
   factory Names.volcanos({
     SupportedLanguage languageCode = SupportedLanguage.english,
     bool randomize = true,
@@ -68,8 +74,12 @@ class Names {
   final String title;
   final List<String> data;
 
+  /// All names by created theme.
+  /// See the factories.
   List<String> get all => data;
 
+  /// Count of names for created theme.
+  /// Always equals 1000. See [names_principles_test.dart].
   int get count => data.length;
 
   /// Next name. Infinity list.
