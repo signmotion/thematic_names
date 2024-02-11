@@ -41,19 +41,25 @@ void main() {
 
       // first
       expect(names.firstFromAll.name, 'Abyssalight');
-      expect(names.firstFromAll.synopsis,
-          'A realm where light shines in the deepest darkness, suggesting hope and exploration.');
+      expect(
+        names.firstFromAll.synopsis,
+        'A realm where light shines in the deepest darkness, suggesting hope and exploration.',
+      );
 
       // middle
       names.skip(500);
-      expect(names.current.name, 'Mistharbor');
-      expect(names.current.synopsis,
-          'A harbor shrouded in mist, suggesting mystery and safe passage.');
+      expect(names.current.name, 'Moonridge');
+      expect(
+        names.current.synopsis,
+        'A mountain range bathed in moonlight, suggesting magic and mystery.',
+      );
 
       // last
       expect(names.lastFromAll.name, 'Zirconveil');
-      expect(names.lastFromAll.synopsis,
-          'A veil made of zircon, symbolizing protection and beauty.');
+      expect(
+        names.lastFromAll.synopsis,
+        'A veil made of zircon, symbolizing protection and beauty.',
+      );
     });
   });
 }

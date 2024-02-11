@@ -286,11 +286,6 @@ const Set<NameR> en = {
         'The core of eternal blizzards, symbolizing the heart of the storm and endurance.',
   ),
   (
-    name: 'Blizzardridge',
-    synopsis:
-        'Ridges where blizzards are born, symbolizing challenge and the raw power of nature.',
-  ),
-  (
     name: 'Bloomfrost',
     synopsis:
         'Frost that nurtures rather than harms, symbolizing protection and unexpected warmth.',
@@ -308,11 +303,6 @@ const Set<NameR> en = {
     name: 'Bloomridge',
     synopsis:
         'A mountain range where every peak is covered in flowers, suggesting beauty and perseverance.',
-  ),
-  (
-    name: 'Borealflame',
-    synopsis:
-        'Flames that burn cold in the north, symbolizing the paradox and allure of the frozen fire.',
   ),
   (name: 'Borealight', synopsis: 'A northern land with stunning auroras.'),
   (
@@ -387,21 +377,6 @@ const Set<NameR> en = {
     name: 'Celestia',
     synopsis:
         'A kingdom under the heavens, suggesting divine beauty or celestial influence.',
-  ),
-  (
-    name: 'Celestial Bay',
-    synopsis:
-        'A bay under celestial guidance, symbolizing destiny and exploration.',
-  ),
-  (
-    name: 'Celestialforge',
-    synopsis:
-        'Forges where items of destiny are crafted, symbolizing fate and craftsmanship.',
-  ),
-  (
-    name: 'Celestialmead',
-    synopsis:
-        'Meadows under the direct gaze of the cosmos, symbolizing connection and the celestial.',
   ),
   (
     name: 'Celestis',
@@ -1919,11 +1894,6 @@ const Set<NameR> en = {
   ),
   (name: 'Knightswatch', synopsis: 'A land guarded by noble warriors.'),
   (
-    name: 'Kraken’s Depth',
-    synopsis:
-        'Seas known for their depth and mysteries, symbolizing the unknown.',
-  ),
-  (
     name: 'Krakenbane',
     synopsis: "A bane to krakens, symbolizing protection and the sea's depth."
   ),
@@ -2002,10 +1972,6 @@ const Set<NameR> en = {
     name: 'Krystalline',
     synopsis:
         'Regions crystallized by magic, symbolizing beauty frozen in time.',
-  ),
-  (
-    name: 'Krystallus',
-    synopsis: 'A realm of crystal clarity, symbolizing purity and truth.',
   ),
   (
     name: 'Kyrandia',
@@ -2171,11 +2137,6 @@ const Set<NameR> en = {
     name: 'Lustrous',
     synopsis:
         'A kingdom renowned for its brilliance and beauty, suggesting allure and splendor.',
-  ),
-  (
-    name: 'Maelstromshore',
-    synopsis:
-        'Shores defined by the presence of sea maelstroms, symbolizing turmoil and navigation.',
   ),
   (name: 'Meadowmist', synopsis: 'A land of soft beauty, enveloped in mist.'),
   (
@@ -2933,17 +2894,9 @@ const Set<NameR> en = {
         'A realm defined by its dazzling quartz mountains, symbolizing clarity and vision.',
   ),
   (
-    name: 'Quartzshine',
-    synopsis: 'A shine as clear as quartz, symbolizing purity and clarity.',
-  ),
-  (
     name: 'Quartzspire',
     synopsis:
         'Towering structures of natural quartz, symbolizing clarity and unyielding strength.',
-  ),
-  (
-    name: 'Quicksilverlake',
-    synopsis: 'Lakes with mercurial surfaces, symbolizing change and fluidity.',
   ),
   (
     name: 'Quillbrook',
@@ -2986,15 +2939,6 @@ const Set<NameR> en = {
   (
     name: 'Quintara',
     synopsis: 'Suggests a land of the fifth element, a place of unique magic.',
-  ),
-  (
-    name: 'Quintessence',
-    synopsis:
-        'Realms of pure essence, symbolizing perfection and the elemental.',
-  ),
-  (
-    name: 'Quintessia',
-    synopsis: 'A realm where the essence of magic is at its purest.',
   ),
   (
     name: 'Quiverfall',
@@ -3609,11 +3553,6 @@ const Set<NameR> en = {
     name: 'Unseenbloom',
     synopsis:
         'Flowers that bloom invisibly, symbolizing hidden beauty and the unseen.',
-  ),
-  (
-    name: 'Untamedexpanse',
-    synopsis:
-        'Vast lands untouched by civilization, symbolizing freedom and wildness.',
   ),
   (
     name: 'Upland',

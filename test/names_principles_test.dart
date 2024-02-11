@@ -9,7 +9,7 @@ import 'helpers/string_ext.dart';
 final list = <Names>[
   Names.agis(randomizeOnInit: false),
   Names.bakeries(randomizeOnInit: false),
-  // Names.fantasyCountries(randomizeOnInit: false),
+  Names.fantasyCountries(randomizeOnInit: false),
   Names.planets(randomizeOnInit: false),
   Names.stars(randomizeOnInit: false),
   Names.volcanos(randomizeOnInit: false),
@@ -26,7 +26,7 @@ void main() {
 
     test(
         'Principle 2: All names for initialize `Names` ordered by abc.'
-        'Case insensetivity.',
+        ' Case insensetivity.',
         () => checkAllNames(checkIsSorted));
 
     test('Principle 3: Names does not contain numbers.',
@@ -40,7 +40,7 @@ void main() {
 
     test(
         'Principle 6: Any new word in name starts with capital letter.'
-        'But we have some exclude words.',
+        ' But we have some exclude words.',
         () => checkAllNames(checkIsAnyNewWordStartsWIthCapitalLetter));
 
     test('Principle 7: Names contains only accepted abc in language.',
@@ -75,14 +75,14 @@ void checkAllNames(bool Function(Set<String>) checker) {
 
 /// \source Package `collection`, method `isSorted()`.
 bool checkIsSorted(Set<String> l) {
-  final iterator = l.iterator;
-  if (!iterator.moveNext()) {
+  final it = l.iterator;
+  if (!it.moveNext()) {
     return true;
   }
 
-  var previousElement = iterator.current.toLowerCase();
-  while (iterator.moveNext()) {
-    final element = iterator.current.toLowerCase();
+  var previousElement = it.current.toLowerCase();
+  while (it.moveNext()) {
+    final element = it.current.toLowerCase();
     if (previousElement.compareTo(element) > 0) {
       print('checkIsSorted() `$previousElement` < `$element`');
       return false;
