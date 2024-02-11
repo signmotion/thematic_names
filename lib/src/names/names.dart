@@ -35,18 +35,18 @@ class Names {
         preserveOrderAfterEnd: preserveOrderAfterEnd,
       );
 
-  /// Generate names for fantasy countries.
-  // factory Names.fantasyCountries({
-  //   SupportedLanguage languageCode = SupportedLanguage.english,
-  //   bool randomizeOnInit = true,
-  //   bool preserveOrderAfterEnd = true,
-  // }) =>
-  //     Names(
-  //       fantasy_countries.title[languageCode]!,
-  //       fantasy_countries.names[languageCode]!,
-  //       randomizeOnInit: randomizeOnInit,
-  //       preserveOrderAfterEnd: preserveOrderAfterEnd,
-  //     );
+  /// Generate names with synopses for fantasy countries.
+  factory Names.fantasyCountries({
+    SupportedLanguage languageCode = SupportedLanguage.english,
+    bool randomizeOnInit = true,
+    bool preserveOrderAfterEnd = true,
+  }) =>
+      Names(
+        fantasy_countries.title[languageCode]!,
+        fantasy_countries.names[languageCode]!,
+        randomizeOnInit: randomizeOnInit,
+        preserveOrderAfterEnd: preserveOrderAfterEnd,
+      );
 
   /// Generate names for planets.
   factory Names.planets({
@@ -159,6 +159,13 @@ class Names {
       name: _loop == 0 ? r.name : '${r.name} $_loop',
       synopsis: r.synopsis,
     );
+  }
+
+  /// Skip [n] names. Infinity list.
+  void skip(int n) {
+    for (var i = 0; i < n; ++i) {
+      next;
+    }
   }
 
   NameR get firstFromAll => _data.first;

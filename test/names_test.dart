@@ -35,5 +35,25 @@ void main() {
       expect(names.loop, 1);
       expect(names.current.name, startsWith(names.firstFromAll.name));
     });
+
+    test('Synopsis and name are agreed upon', () {
+      final names = Names.fantasyCountries(randomizeOnInit: false);
+
+      // first
+      expect(names.firstFromAll.name, 'Abyssalight');
+      expect(names.firstFromAll.synopsis,
+          'A realm where light shines in the deepest darkness, suggesting hope and exploration.');
+
+      // middle
+      names.skip(500);
+      expect(names.current.name, 'Mistharbor');
+      expect(names.current.synopsis,
+          'A harbor shrouded in mist, suggesting mystery and safe passage.');
+
+      // last
+      expect(names.lastFromAll.name, 'Zirconveil');
+      expect(names.lastFromAll.synopsis,
+          'A veil made of zircon, symbolizing protection and beauty.');
+    });
   });
 }
