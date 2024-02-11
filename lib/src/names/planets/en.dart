@@ -598,7 +598,7 @@ const Set<String> en = <String>{
   'Nesippe',
   'Nesyke',
   'Nettoyer',
-  'New',
+  'Newer',
   'Nibiru',
   'Night',
   'Nionazar',

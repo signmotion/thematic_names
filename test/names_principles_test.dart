@@ -58,10 +58,10 @@ void main() {
               checkLengthAnyWordContainsAtLeast2CharactersWithSomeExluded,
             ));
 
-    // test(
-    //     "Principle 10: Any word in the name has no such word in it:"
-    //     ' sides of the world, directions, distances, etc.',
-    //     () => checkAllNames(checkIsExcludeDirectionDistancesEtc));
+    test(
+        "Principle 10: The first word in the name has no such word in it:"
+        ' sides of the world, directions, distances, etc.',
+        () => checkAllNames(checkIsExcludeInFirstWordDirectionDistancesEtc));
   });
 }
 
@@ -173,7 +173,9 @@ bool checkLengthAnyWordContainsAtLeast2CharactersWithSomeExluded(
     final words = name.split(' ');
     for (final word in words) {
       if (word.length < 2 && !excludes.contains(word)) {
-        print('checkLengthAnyWordContainsAtLeast2Characters() `$name`');
+        print(
+          'checkLengthAnyWordContainsAtLeast2CharactersWithSomeExluded() `$name`',
+        );
         return false;
       }
     }
@@ -182,36 +184,42 @@ bool checkLengthAnyWordContainsAtLeast2CharactersWithSomeExluded(
   return true;
 }
 
-// bool checkIsExcludeDirectionDistancesEtc(List<String> l) {
-//   const excludes = <String>[
-//     'bottom',
-//     'down',
-//     'east',
-//     'far',
-//     'great',
-//     'greater',
-//     'left',
-//     'lower',
-//     'near',
-//     'nearest',
-//     'new',
-//     'north',
-//     'old',
-//     'right',
-//     'south',
-//     'top',
-//     'up',
-//     'west',
-//   ];
-//   for (final name in l) {
-//     final words = name.split(' ');
-//     for (final word in words) {
-//       if (excludes.contains(word.toLowerCase())) {
-//         print('checkIsExcludeDirectionDistancesEtc() `$name`');
-//         return false;
-//       }
-//     }
-//   }
+bool checkIsExcludeInFirstWordDirectionDistancesEtc(List<String> l) {
+  const excludes = <String>[
+    'above',
+    'ahead',
+    'behind',
+    'below',
+    'bottom',
+    'down',
+    'east',
+    'far',
+    'great',
+    'greater',
+    'left',
+    'lower',
+    'near',
+    'nearest',
+    'new',
+    'newest',
+    'north',
+    'old',
+    'oldest',
+    'right',
+    'south',
+    'top',
+    'up',
+    'upper',
+    'west',
+  ];
+  for (final name in l) {
+    final words = name.split(' ');
+    final word = words.first;
+    if (excludes.contains(word.toLowerCase())) {
+      print('checkIsExcludeInFirstWordDirectionDistancesEtc() `$name`');
+      return false;
+    }
+  }
 
-//   return true;
-// }
+  return true;
+}
