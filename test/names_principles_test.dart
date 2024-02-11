@@ -44,6 +44,11 @@ void main() {
 
     test('Principle 7: Names contains only accepted abc in language.',
         () => checkAllNames(checkIsContainsOnlyAcceptedAbcInLanguage));
+
+    test(
+        'Principle 9: The length of names is from 2 characters and does'
+        ' not exceed 100 characters.',
+        () => checkAllNames(checkLengthBetween2And100Characters));
   });
 }
 
@@ -130,6 +135,17 @@ bool checkIsContainsOnlyAcceptedAbcInLanguage(List<String> l) {
         print('checkIsContainsOnlyAcceptedAbcInLanguage() `$name`');
         return false;
       }
+    }
+  }
+
+  return true;
+}
+
+bool checkLengthBetween2And100Characters(List<String> l) {
+  for (final name in l) {
+    if (name.length < 2 && name.length > 100) {
+      print('checkLengthBetween2And100Characters() `$name`');
+      return false;
     }
   }
 
