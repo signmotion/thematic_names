@@ -524,7 +524,7 @@ const Set<String> en = <String>{
   'Infinitis Cortex',
   'Infinitium',
   'Infinitium Cortex',
-  'Infinitium I Q',
+  'Infinitium IQ',
   'Infinitix',
   'Infinitix Cortex',
   'Infinitrix',

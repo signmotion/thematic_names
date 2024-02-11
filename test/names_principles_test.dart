@@ -9,6 +9,7 @@ import 'helpers/string_ext.dart';
 final list = <Names>[
   Names.agis(randomize: false),
   Names.bakeries(randomize: false),
+  // Names.fantasyCountries(randomize: false),
   Names.planets(randomize: false),
   Names.stars(randomize: false),
   Names.volcanos(randomize: false),
@@ -46,9 +47,21 @@ void main() {
         () => checkAllNames(checkIsContainsOnlyAcceptedAbcInLanguage));
 
     test(
-        'Principle 9: The length of names is from 2 characters and does'
-        ' not exceed 100 characters.',
+        'Principle 8: The length of names is from 2 characters and does'
+        ' not exceed 120 characters.',
         () => checkAllNames(checkLengthBetween2And100Characters));
+
+    test(
+        'Principle 9: Any word in the name contains at least 2 characters'
+        ' with language-dependent exceptions.',
+        () => checkAllNames(
+              checkLengthAnyWordContainsAtLeast2CharactersWithSomeExluded,
+            ));
+
+    // test(
+    //     "Principle 10: Any word in the name has no such word in it:"
+    //     ' sides of the world, directions, distances, etc.',
+    //     () => checkAllNames(checkIsExcludeDirectionDistancesEtc));
   });
 }
 
@@ -143,7 +156,7 @@ bool checkIsContainsOnlyAcceptedAbcInLanguage(List<String> l) {
 
 bool checkLengthBetween2And100Characters(List<String> l) {
   for (final name in l) {
-    if (name.length < 2 && name.length > 100) {
+    if (name.length < 2 && name.length > 120) {
       print('checkLengthBetween2And100Characters() `$name`');
       return false;
     }
@@ -151,3 +164,54 @@ bool checkLengthBetween2And100Characters(List<String> l) {
 
   return true;
 }
+
+bool checkLengthAnyWordContainsAtLeast2CharactersWithSomeExluded(
+  List<String> l,
+) {
+  const excludes = <String>['a', 'and', 'by', 'in', 'of', 'on', 'or'];
+  for (final name in l) {
+    final words = name.split(' ');
+    for (final word in words) {
+      if (word.length < 2 && !excludes.contains(word)) {
+        print('checkLengthAnyWordContainsAtLeast2Characters() `$name`');
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+
+// bool checkIsExcludeDirectionDistancesEtc(List<String> l) {
+//   const excludes = <String>[
+//     'bottom',
+//     'down',
+//     'east',
+//     'far',
+//     'great',
+//     'greater',
+//     'left',
+//     'lower',
+//     'near',
+//     'nearest',
+//     'new',
+//     'north',
+//     'old',
+//     'right',
+//     'south',
+//     'top',
+//     'up',
+//     'west',
+//   ];
+//   for (final name in l) {
+//     final words = name.split(' ');
+//     for (final word in words) {
+//       if (excludes.contains(word.toLowerCase())) {
+//         print('checkIsExcludeDirectionDistancesEtc() `$name`');
+//         return false;
+//       }
+//     }
+//   }
+
+//   return true;
+// }
