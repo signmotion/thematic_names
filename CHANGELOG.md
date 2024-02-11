@@ -9,7 +9,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Added the 3 new principles:
   - The length of names is from 2 characters and does not exceed 120 characters.
   - Any word in the name contains at least 2 characters with language-dependent exceptions.
-  - The first word in the name has no such word in it: ['above', 'ahead', 'behind', 'below', 'bottom', 'down', 'east', 'far', 'great', 'greater', 'left', 'lower', 'near', 'nearest', 'new', 'newest', 'north', 'next', 'old', 'oldest', 'previos', 'previuos', 'right', 'south', 'top', 'up', 'upper', 'west']].
+  - The first word in the name has no such word in it: ['above', 'ahead', 'behind', 'below', 'bottom', 'down', 'east', 'far', 'great', 'greater', 'left', 'lower', 'near', 'nearest', 'new', 'newest', 'north', 'next', 'old', 'oldest', 'previos', 'previuos', 'right', 'south', 'top', 'up', 'upper', 'west'].
+- Introduced `Names.skip(n)` to skip `n` names.
 - Added `README` to `example`.
 - Updated `README`.
 - Upgraded dependencies.

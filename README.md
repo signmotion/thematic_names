@@ -68,7 +68,7 @@ These rules are enforced for each set of names.
 
 9. Any word in the name contains at least 2 characters with language-dependent exceptions. Exluded words: see the principle 6.
 
-10. The first word in the name has no such word in it: ['above', 'ahead', 'behind', 'below', 'bottom', 'down', 'east', 'far', 'great', 'greater', 'left', 'lower', 'near', 'nearest', 'new', 'newest', 'north', 'next', 'old', 'oldest', 'previos', 'previuos', 'right', 'south', 'top', 'up', 'upper', 'west']].
+10. The first word in the name has no such word in it: ['above', 'ahead', 'behind', 'below', 'bottom', 'down', 'east', 'far', 'great', 'greater', 'left', 'lower', 'near', 'nearest', 'new', 'newest', 'north', 'next', 'old', 'oldest', 'previos', 'previuos', 'right', 'south', 'top', 'up', 'upper', 'west'].
 
 ## Welcome
 
