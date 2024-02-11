@@ -7,12 +7,12 @@ import 'package:thematic_names/thematic_names.dart';
 import 'helpers/string_ext.dart';
 
 final list = <Names>[
-  Names.agis(randomize: false),
-  Names.bakeries(randomize: false),
-  // Names.fantasyCountries(randomize: false),
-  Names.planets(randomize: false),
-  Names.stars(randomize: false),
-  Names.volcanos(randomize: false),
+  Names.agis(randomizeOnInit: false),
+  Names.bakeries(randomizeOnInit: false),
+  // Names.fantasyCountries(randomizeOnInit: false),
+  Names.planets(randomizeOnInit: false),
+  Names.stars(randomizeOnInit: false),
+  Names.volcanos(randomizeOnInit: false),
 ];
 
 void main() {
@@ -65,14 +65,14 @@ void main() {
   });
 }
 
-void checkAllNames(bool Function(List<String>) checker) {
+void checkAllNames(bool Function(Set<String>) checker) {
   for (final names in list) {
     expect(checker(names.all), true, reason: names.title);
   }
 }
 
 /// \source Package `collection`, method `isSorted()`.
-bool checkIsSorted(List<String> l) {
+bool checkIsSorted(Set<String> l) {
   final iterator = l.iterator;
   if (!iterator.moveNext()) {
     return true;
@@ -92,7 +92,7 @@ bool checkIsSorted(List<String> l) {
   return true;
 }
 
-bool checkIsNotContainNumbers(List<String> l) {
+bool checkIsNotContainNumbers(Set<String> l) {
   for (final name in l) {
     if (name.contains(RegExp(r'[0123456789]'))) {
       print('checkIsNotContainNumbers() `$name`');
@@ -103,7 +103,7 @@ bool checkIsNotContainNumbers(List<String> l) {
   return true;
 }
 
-bool checkIsNotContainTrailingSpaces(List<String> l) {
+bool checkIsNotContainTrailingSpaces(Set<String> l) {
   for (final name in l) {
     if (name.trim() != name) {
       print('checkIsNotContainTrailingSpaces() `$name`');
@@ -114,7 +114,7 @@ bool checkIsNotContainTrailingSpaces(List<String> l) {
   return true;
 }
 
-bool checkIsNotContainDoubleSpaces(List<String> l) {
+bool checkIsNotContainDoubleSpaces(Set<String> l) {
   for (final name in l) {
     if (name.removedDoubleSpaces != name) {
       print('checkIsNotContainDoubleSpaces() `$name`');
@@ -125,8 +125,8 @@ bool checkIsNotContainDoubleSpaces(List<String> l) {
   return true;
 }
 
-bool checkIsAnyNewWordStartsWIthCapitalLetter(List<String> l) {
-  const excludes = <String>['a', 'and', 'by', 'in', 'of', 'on', 'or'];
+bool checkIsAnyNewWordStartsWIthCapitalLetter(Set<String> l) {
+  const excludes = <String>{'a', 'and', 'by', 'in', 'of', 'on', 'or'};
   for (final name in l) {
     final words = name.split(' ');
     for (final word in words) {
@@ -140,7 +140,7 @@ bool checkIsAnyNewWordStartsWIthCapitalLetter(List<String> l) {
   return true;
 }
 
-bool checkIsContainsOnlyAcceptedAbcInLanguage(List<String> l) {
+bool checkIsContainsOnlyAcceptedAbcInLanguage(Set<String> l) {
   for (final name in l) {
     final words = name.split(' ');
     for (final word in words) {
@@ -154,7 +154,7 @@ bool checkIsContainsOnlyAcceptedAbcInLanguage(List<String> l) {
   return true;
 }
 
-bool checkLengthBetween2And100Characters(List<String> l) {
+bool checkLengthBetween2And100Characters(Set<String> l) {
   for (final name in l) {
     if (name.length < 2 && name.length > 120) {
       print('checkLengthBetween2And100Characters() `$name`');
@@ -166,9 +166,9 @@ bool checkLengthBetween2And100Characters(List<String> l) {
 }
 
 bool checkLengthAnyWordContainsAtLeast2CharactersWithSomeExluded(
-  List<String> l,
+  Set<String> l,
 ) {
-  const excludes = <String>['a', 'and', 'by', 'in', 'of', 'on', 'or'];
+  const excludes = <String>{'a', 'and', 'by', 'in', 'of', 'on', 'or'};
   for (final name in l) {
     final words = name.split(' ');
     for (final word in words) {
@@ -184,8 +184,8 @@ bool checkLengthAnyWordContainsAtLeast2CharactersWithSomeExluded(
   return true;
 }
 
-bool checkIsExcludeInFirstWordDirectionDistancesEtc(List<String> l) {
-  const excludes = <String>[
+bool checkIsExcludeInFirstWordDirectionDistancesEtc(Set<String> l) {
+  const excludes = <String>{
     'above',
     'ahead',
     'behind',
@@ -203,18 +203,20 @@ bool checkIsExcludeInFirstWordDirectionDistancesEtc(List<String> l) {
     'new',
     'newest',
     'north',
+    'next',
     'old',
     'oldest',
+    'previos',
+    'previuos',
     'right',
     'south',
     'top',
     'up',
     'upper',
     'west',
-  ];
+  };
   for (final name in l) {
-    final words = name.split(' ');
-    final word = words.first;
+    final word = name.split(' ').first;
     if (excludes.contains(word.toLowerCase())) {
       print('checkIsExcludeInFirstWordDirectionDistancesEtc() `$name`');
       return false;
