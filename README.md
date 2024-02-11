@@ -9,7 +9,7 @@ Easy-to-use and well-tested Dart package.
 
 ## Features
 
-Contains exactly 1000 unique, calibrated (see the Principles below) names for
+Contains exactly 1000 unique, calibrated (see the **Principles** below) names for
 
 - artificial general intelligence (AGIs) `Names.agis()`
 - bakeries `Names.bakeries()`
@@ -60,15 +60,15 @@ These rules are enforced for each set of names.
 
 5. Names doesn't contain double spaces.
 
-6. Any new word in name starts with capital letter with language-dependent exceptions. Exclude words: ['a', 'and', 'by', 'in', 'of', 'on', 'or'].
+6. Any new word in name starts with capital letter with language-dependent exceptions. Excluded words: ['a', 'and', 'by', 'in', 'of', 'on', 'or'].
 
 7. Names contains only accepted abc in the language.
 
 8. The length of names is from 2 characters and does not exceed 120 characters.
 
-9. Any word in the name contains at least 2 characters with language-dependent exceptions. Exlude words: see the principle 6.
+9. Any word in the name contains at least 2 characters with language-dependent exceptions. Exluded words: see the principle 6.
 
-10. The first word in the name has no such word in it: TODO.
+10. The first word in the name has no such word in it: ['above', 'ahead', 'behind', 'below', 'bottom', 'down', 'east', 'far', 'great', 'greater', 'left', 'lower', 'near', 'nearest', 'new', 'newest', 'north', 'next', 'old', 'oldest', 'previos', 'previuos', 'right', 'south', 'top', 'up', 'upper', 'west']].
 
 ## Welcome
 
@@ -89,5 +89,6 @@ General questions are best asked on
 
 ## TODO
 
+- Principles and tests for synopses.
 - Example with external own set of names.
-- Names in other languages.
+- Names and synopses in other languages.
