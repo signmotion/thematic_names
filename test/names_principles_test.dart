@@ -58,6 +58,7 @@ void main() {
               checkLengthAnyWordContainsAtLeast2CharactersWithSomeExluded,
             ));
 
+    /// Use for check: https://docs.google.com/spreadsheets/d/1ACObZHqiyTyUB-4qGYKSZ6R-wMCLb6St3zK1SMu6cdY
     test(
         "Principle 10: The first word in the name has no such word in it:"
         ' sides of the world, directions, distances, etc.',
@@ -67,7 +68,8 @@ void main() {
 
 void checkAllNames(bool Function(Set<String>) checker) {
   for (final names in list) {
-    expect(checker(names.all), true, reason: names.title);
+    final ns = names.all.map((r) => r.name).toSet();
+    expect(checker(ns), true, reason: names.title);
   }
 }
 

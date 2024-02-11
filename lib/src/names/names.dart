@@ -1,3 +1,4 @@
+import 'name_r.dart';
 import 'supported_language.dart';
 import 'agis/names.dart' as agis;
 import 'bakeries/names.dart' as bakeries;
@@ -35,17 +36,17 @@ class Names {
       );
 
   /// Generate names for fantasy countries.
-  factory Names.fantasyCountries({
-    SupportedLanguage languageCode = SupportedLanguage.english,
-    bool randomizeOnInit = true,
-    bool preserveOrderAfterEnd = true,
-  }) =>
-      Names(
-        fantasy_countries.title[languageCode]!,
-        fantasy_countries.names[languageCode]!,
-        randomizeOnInit: randomizeOnInit,
-        preserveOrderAfterEnd: preserveOrderAfterEnd,
-      );
+  // factory Names.fantasyCountries({
+  //   SupportedLanguage languageCode = SupportedLanguage.english,
+  //   bool randomizeOnInit = true,
+  //   bool preserveOrderAfterEnd = true,
+  // }) =>
+  //     Names(
+  //       fantasy_countries.title[languageCode]!,
+  //       fantasy_countries.names[languageCode]!,
+  //       randomizeOnInit: randomizeOnInit,
+  //       preserveOrderAfterEnd: preserveOrderAfterEnd,
+  //     );
 
   /// Generate names for planets.
   factory Names.planets({
@@ -88,7 +89,7 @@ class Names {
 
   Names(
     this.title,
-    Set<String> data, {
+    Set<NameR> data, {
     this.randomizeOnInit = true,
     this.preserveOrderAfterEnd = true,
   })  : assert(title.isNotEmpty, 'The title of names should be set.'),
@@ -116,7 +117,7 @@ class Names {
   final String title;
 
   /// All names of this set.
-  Set<String> _data;
+  Set<NameR> _data;
 
   /// Shuffle the names after create an object or reinitialize it.
   /// See [preserveOrderAfterEnd], [_init].
@@ -129,14 +130,14 @@ class Names {
 
   /// All names by created theme.
   /// See the factories.
-  Set<String> get all => Set.unmodifiable(_data);
+  Set<NameR> get all => Set.unmodifiable(_data);
 
   /// Count of names for created theme.
   /// Always equals 1000. See [names_principles_test.dart].
   int get count => _data.length;
 
   /// Next name. Infinity list.
-  String get next {
+  NameR get next {
     if (!it.moveNext()) {
       _init();
     }
@@ -145,8 +146,8 @@ class Names {
   }
 
   /// Current name.
-  String get current {
-    late final String r;
+  NameR get current {
+    late NameR r;
     try {
       r = it.current;
     } catch (_) {
@@ -154,15 +155,18 @@ class Names {
       r = it.current;
     }
 
-    return _loop == 0 ? r : '$r $_loop';
+    return (
+      name: _loop == 0 ? r.name : '${r.name} $_loop',
+      synopsis: r.synopsis,
+    );
   }
 
-  String get firstFromAll => _data.first;
+  NameR get firstFromAll => _data.first;
 
-  String get lastFromAll => _data.last;
+  NameR get lastFromAll => _data.last;
 
   // The pointer to the current name.
-  late Iterator<String> it;
+  late Iterator<NameR> it;
 
   // How many times did we go through the all names.
   int _loop = -1;

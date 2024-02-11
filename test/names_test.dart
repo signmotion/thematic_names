@@ -8,7 +8,7 @@ void main() {
 
       final first = names.current;
       expect(first, names.firstFromAll);
-      expect(names.next, isNotEmpty);
+      expect(names.next.name, isNotEmpty);
       expect(names.current != first, true);
       expect(names.loop, 0);
     });
@@ -26,14 +26,14 @@ void main() {
       final names = Names.volcanos();
 
       for (var i = 0; i < names.count; ++i) {
-        expect(names.next, isNotEmpty);
+        expect(names.next.name, isNotEmpty);
       }
 
       expect(names.loop, 0);
       expect(names.current, names.lastFromAll);
       names.next;
       expect(names.loop, 1);
-      expect(names.current, startsWith(names.firstFromAll));
+      expect(names.current.name, startsWith(names.firstFromAll.name));
     });
   });
 }
