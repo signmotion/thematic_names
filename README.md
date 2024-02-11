@@ -1,9 +1,11 @@
 # Thematic Unique Name Generator
 
-![Cover - Names](https://raw.githubusercontent.com/signmotion/thematic_names/master/images/cover.webp)
+![Cover - Thematic Names](https://raw.githubusercontent.com/signmotion/thematic_names/master/images/cover.webp)
+
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/signmotion/id_gen/master/LICENSE)
 
 Generate an **infinite** number of **thematic calibrated unique** names.
-Well-tested Dart package.
+Easy-to-use and well-tested Dart package.
 
 ## Features
 
@@ -11,6 +13,7 @@ Contains exactly 1000 unique, calibrated (see the Principles below) names for
 
 - artificial general intelligence (AGIs) `Names.agis()`
 - bakeries `Names.bakeries()`
+- fantasyCountries `Names.fantasyCountries()`
 - planets `Names.planets()`
 - stars `Names.stars()`
 - volcanos `Names.volcanos()`
@@ -57,20 +60,34 @@ These rules are enforced for each set of names.
 
 5. Names doesn't contain double spaces.
 
-6. Any new word in name starts with capital letter. Exclude words: ['a', 'and', 'by', 'in', 'of', 'on', 'or'].
+6. Any new word in name starts with capital letter with language-dependent exceptions. Exclude words: ['a', 'and', 'by', 'in', 'of', 'on', 'or'].
 
 7. Names contains only accepted abc in the language.
 
+8. The length of names is from 2 characters and does not exceed 120 characters.
+
+9. Any word in the name contains at least 2 characters with language-dependent exceptions. Exlude words: see the principle 6.
+
+10. The first word in the name has no such word in it: TODO.
+
 ## Welcome
 
-Welcome to add your own sets of 1000 unique names for... anything on any language)
+Welcome to add your own sets of 1000 unique names for... anything on any language.
+
+[The shared table](https://docs.google.com/spreadsheets/d/1a47-yqtVmVB8MjgfKIscmcX0LKxt5xPRe4OlyflZ51g/copy)
+can help do it. Also you can use [this sheets](https://docs.google.com/spreadsheets/d/191DerwdKESDnRZ0aRoJXcIFa6o4ak8eO6XUawBlmRhQ/copy)
+for multiply substitutes words.
 
 When you create your own nameset, please, include it in the `names_principles_test.dart` file.
 
-## License
+This package is open-source, stable and well-tested. Development happens on
+[GitHub](https://github.com/signmotion/id_gen). Feel free to report issues
+or create a pull-request there.
 
-[MIT](LICENSE)
+General questions are best asked on
+[StackOverflow](https://stackoverflow.com/questions/tagged/id_gen).
 
 ## TODO
 
 - Example with external own set of names.
+- Names in other languages.

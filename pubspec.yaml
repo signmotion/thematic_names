@@ -1,7 +1,7 @@
 name: thematic_names
-description: The package generates an infinite number of thematic calibrated unique names.
+description: >-
+  The package generates an infinite number of thematic calibrated unique names.
 repository: https://github.com/signmotion/thematic_names.git
-
 topics:
   - generator
   - names-generator

@@ -6,7 +6,7 @@ void main() {
   // get a set of 1000 unique volcano names
   final names = Names.volcanos(languageCode: SupportedLanguage.english);
 
-  // all names
+  // all 1000 names
   print(names);
 
   // generate 4 names
