@@ -3,6 +3,11 @@
 All notable changes to the project `ThematicNames` will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.0
+
+- Renamed `NameR.name` to `NameR.title`.
+- Updated `example` and `README`.
+
 ## 0.2.1
 
 - Shared the type `NameR`.
