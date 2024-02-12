@@ -1,1 +1,1 @@
-typedef NameR = ({String name, String? synopsis});
+typedef NameR = ({String title, String? synopsis});

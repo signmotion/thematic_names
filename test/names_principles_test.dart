@@ -68,8 +68,8 @@ void main() {
 
 void checkAllNames(bool Function(Set<String>) checker) {
   for (final names in list) {
-    final ns = names.all.map((r) => r.name).toSet();
-    expect(checker(ns), true, reason: names.title);
+    final titles = names.all.map((r) => r.title).toSet();
+    expect(checker(titles), true, reason: names.title);
   }
 }
 

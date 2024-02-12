@@ -156,7 +156,7 @@ class Names {
     }
 
     return (
-      name: _loop == 0 ? r.name : '${r.name} $_loop',
+      title: _loop == 0 ? r.title : '${r.title} $_loop',
       synopsis: r.synopsis,
     );
   }
