@@ -13,7 +13,7 @@ Contains exactly 1000 unique, calibrated (see the **Principles** below) names fo
 
 - artificial general intelligence (AGIs) `Names.agis()`
 - bakeries `Names.bakeries()`
-- fantasyCountries `Names.fantasyCountries()`
+- fantasy countries `Names.fantasyCountries()`
 - planets `Names.planets()`
 - stars `Names.stars()`
 - volcanos `Names.volcanos()`
@@ -78,7 +78,7 @@ Welcome to add your own sets of 1000 unique names for... anything on any languag
 can help do it. Also you can use [this sheets](https://docs.google.com/spreadsheets/d/191DerwdKESDnRZ0aRoJXcIFa6o4ak8eO6XUawBlmRhQ/copy)
 for multiply substitutes words.
 
-When you create your own nameset, please, include it in the `names_principles_test.dart` file.
+When you create your own nameset, `please, include it in the`names_principles_test.dart` file.
 
 This package is open-source, stable and well-tested. Development happens on
 [GitHub](https://github.com/signmotion/id_gen). Feel free to report issues
