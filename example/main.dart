@@ -11,6 +11,6 @@ void main() {
 
   // generate 4 names
   for (var i = 0; i < 4; ++i) {
-    print(names.next);
+    print(names.next.title);
   }
 }

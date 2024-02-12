@@ -35,14 +35,14 @@ final names = Names.volcanos();
 ### Output all available thematic names
 
 ```dart
-print(names);
+print(names.title);
 ```
 
 ### Generate 4 names
 
 ```dart
 for (var i = 0; i < 4; ++i) {
-  print(names.next);
+  print(names.next.title);
 }
 ```
 
