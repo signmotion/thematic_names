@@ -57,6 +57,31 @@
   "hidefiles.globalConfig": {
     "profiles": [
       {
+        "hidden": [
+          "**/.*",
+          "CHANGELOG.md",
+          "CODE_OF_CONDUCT.md",
+          "CONTRIBUTING.md",
+          "LICENSE",
+          "pubspec.lock",
+          "SECURITY.md",
+          "STYLEGUIDE.md",
+          "**/README.md",
+          "**/android/",
+          "**/build/",
+          "**/ios/",
+          "**/windows/",
+          "**/analysis_options.yaml",
+          "**/app.iml",
+          "**/devtools_options.yaml",
+          "**/pubspec.lock"
+        ],
+        "name": "Flutter",
+        "description": "",
+        "detail": "",
+        "peek": []
+      },
+      {
         "hidden": ["**/__pycache__", "**/__init__.py"],
         "name": "Python",
         "description": "",
