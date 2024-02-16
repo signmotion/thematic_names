@@ -22,7 +22,7 @@ void main() {
       expect(names.loop, 0);
     });
 
-    test('Loop by names, all names works same', () {
+    test('Loop by all names, all names works same', () {
       final names = Names.volcanos();
 
       for (var i = 0; i < names.count; ++i) {
@@ -33,7 +33,20 @@ void main() {
       expect(names.current, names.lastFromAll);
       names.next;
       expect(names.loop, 1);
-      expect(names.current.title, startsWith(names.firstFromAll.title));
+      expect(names.current.title, equals('${names.firstFromAll.title} 1'));
+    });
+
+    test('Loop by all names without loop-index, all names works same', () {
+      final names = Names.volcanos(withLoopNumber: false);
+
+      for (var i = 0; i < names.count; ++i) {
+        names.next;
+      }
+
+      expect(names.loop, 0);
+      names.next;
+      expect(names.loop, 1);
+      expect(names.current.title, equals(names.firstFromAll.title));
     });
 
     test('Synopsis and name are agreed upon', () {

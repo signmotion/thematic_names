@@ -14,12 +14,14 @@ class Names {
     SupportedLanguage languageCode = SupportedLanguage.english,
     bool randomizeOnInit = true,
     bool preserveOrderAfterEnd = true,
+    bool withLoopNumber = true,
   }) =>
       Names(
         agis.title[languageCode]!,
         agis.names[languageCode]!,
         randomizeOnInit: randomizeOnInit,
         preserveOrderAfterEnd: preserveOrderAfterEnd,
+        withLoopNumber: withLoopNumber,
       );
 
   /// Generate names for bakeries.
@@ -27,12 +29,14 @@ class Names {
     SupportedLanguage languageCode = SupportedLanguage.english,
     bool randomizeOnInit = true,
     bool preserveOrderAfterEnd = true,
+    bool withLoopNumber = true,
   }) =>
       Names(
         bakeries.title[languageCode]!,
         bakeries.names[languageCode]!,
         randomizeOnInit: randomizeOnInit,
         preserveOrderAfterEnd: preserveOrderAfterEnd,
+        withLoopNumber: withLoopNumber,
       );
 
   /// Generate names with synopses for fantasy countries.
@@ -40,12 +44,14 @@ class Names {
     SupportedLanguage languageCode = SupportedLanguage.english,
     bool randomizeOnInit = true,
     bool preserveOrderAfterEnd = true,
+    bool withLoopNumber = true,
   }) =>
       Names(
         fantasy_countries.title[languageCode]!,
         fantasy_countries.names[languageCode]!,
         randomizeOnInit: randomizeOnInit,
         preserveOrderAfterEnd: preserveOrderAfterEnd,
+        withLoopNumber: withLoopNumber,
       );
 
   /// Generate names for planets.
@@ -53,12 +59,14 @@ class Names {
     SupportedLanguage languageCode = SupportedLanguage.english,
     bool randomizeOnInit = true,
     bool preserveOrderAfterEnd = true,
+    bool withLoopNumber = true,
   }) =>
       Names(
         planet.title[languageCode]!,
         planet.names[languageCode]!,
         randomizeOnInit: randomizeOnInit,
         preserveOrderAfterEnd: preserveOrderAfterEnd,
+        withLoopNumber: withLoopNumber,
       );
 
   /// Generate names for stars.
@@ -66,12 +74,14 @@ class Names {
     SupportedLanguage languageCode = SupportedLanguage.english,
     bool randomizeOnInit = true,
     bool preserveOrderAfterEnd = true,
+    bool withLoopNumber = true,
   }) =>
       Names(
         stars.title[languageCode]!,
         stars.names[languageCode]!,
         randomizeOnInit: randomizeOnInit,
         preserveOrderAfterEnd: preserveOrderAfterEnd,
+        withLoopNumber: withLoopNumber,
       );
 
   /// Generate names for volcanos.
@@ -79,12 +89,14 @@ class Names {
     SupportedLanguage languageCode = SupportedLanguage.english,
     bool randomizeOnInit = true,
     bool preserveOrderAfterEnd = true,
+    bool withLoopNumber = true,
   }) =>
       Names(
         volcano.title[languageCode]!,
         volcano.names[languageCode]!,
         randomizeOnInit: randomizeOnInit,
         preserveOrderAfterEnd: preserveOrderAfterEnd,
+        withLoopNumber: withLoopNumber,
       );
 
   Names(
@@ -92,6 +104,7 @@ class Names {
     Set<NameR> data, {
     this.randomizeOnInit = true,
     this.preserveOrderAfterEnd = true,
+    this.withLoopNumber = true,
   })  : assert(title.isNotEmpty, 'The title of names should be set.'),
         assert(data.isNotEmpty, 'The list of names should be not empty.'),
         _data = data {
@@ -128,6 +141,9 @@ class Names {
   /// Have not an effect when [randomizeOnConstruct] == `false`.
   final bool preserveOrderAfterEnd;
 
+  /// Add a number to title after getting all name set.
+  final bool withLoopNumber;
+
   /// All names by created theme.
   /// See the factories.
   Set<NameR> get all => Set.unmodifiable(_data);
@@ -156,7 +172,7 @@ class Names {
     }
 
     return (
-      title: _loop == 0 ? r.title : '${r.title} $_loop',
+      title: _loop == 0 || !withLoopNumber ? r.title : '${r.title} $_loop',
       synopsis: r.synopsis,
     );
   }
