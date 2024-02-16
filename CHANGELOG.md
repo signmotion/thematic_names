@@ -3,6 +3,11 @@
 All notable changes to the project `ThematicNames` will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.0
+
+- Added a boolean `withLoopNumber` to display or not a number after going through the entire 1000 names.
+- Replaced empty strings for `synopses` to null.
+
 ## 0.3.0
 
 - Renamed `NameR.name` to `NameR.title`.
