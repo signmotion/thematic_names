@@ -2,7 +2,7 @@
 
 ![Cover - Thematic Names](https://raw.githubusercontent.com/signmotion/thematic_names/master/images/cover.webp)
 
-[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/signmotion/id_gen/master/LICENSE)
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/signmotion/thematic_names/master/LICENSE)
 
 Generate an **infinite** number of **thematic calibrated unique** names.
 Easy-to-use and well-tested Dart package.
@@ -119,11 +119,11 @@ for multiply substitutes words.
 When you create your own nameset, `please, include it in the`names_principles_test.dart` file.
 
 This package is open-source, stable and well-tested. Development happens on
-[GitHub](https://github.com/signmotion/id_gen). Feel free to report issues
+[GitHub](https://github.com/signmotion/thematic_names). Feel free to report issues
 or create a pull-request there.
 
 General questions are best asked on
-[StackOverflow](https://stackoverflow.com/questions/tagged/id_gen).
+[StackOverflow](https://stackoverflow.com/questions/tagged/thematic_names).
 
 ## TODO
 
