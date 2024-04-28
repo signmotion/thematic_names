@@ -24,7 +24,7 @@ Feel free to use it in your awesome project.
 
 Share some ❤️ and star repo to support the project.
 
-_If you write an article about **ThematicUniqueNameGenerator** or any of [these](https://pub.dev/packages?q=publisher%3Asyrokomskyi.com&sort=updated) packages, let me know and I'll post the URL of the article in the **README**_ 🤝
+_If you write an article about **ThematicNames** or any of [these](https://pub.dev/packages?q=publisher%3Asyrokomskyi.com&sort=updated) packages, let me know and I'll post the URL of the article in the **README**_ 🤝
 
 ## 🌟 Features
 
@@ -141,7 +141,7 @@ If this is your first contribution, I'll leave you with some of the best links I
 - [Summer Guide from Google](https://youtu.be/qGTQ7dEZXZc).
 - [CodeTriangle](https://codetriage.com). Free community tools for contributing to Open Source projects.
 
-The package **ThematicUniqueNameGenerator** is open-source, stable and well-tested. Development happens on
+The package **ThematicNames** is open-source, stable and well-tested. Development happens on
 [GitHub](https://github.com/signmotion/thematic_names). Feel free to report issues
 or create a pull-request there.
 
@@ -160,7 +160,7 @@ And here is a curated list of how you can help:
 
 ## ✅ TODO (perhaps)
 
-Once you start using the **ThematicUniqueNameGenerator**, it will become easy to choose the functionality to contribute. But if you already get everything you need from this package but have some free time, let me write here what I have planned:
+Once you start using the **ThematicNames**, it will become easy to choose the functionality to contribute. But if you already get everything you need from this package but have some free time, let me write here what I have planned:
 
 - Principles and tests for synopses.
 - Example with external own set of names.

@@ -1,6 +1,6 @@
 # Style Guide
 
-This is a general style guide that shall govern over all **ThematicUniqueNameGenerator** project. The aim is
+This is a general style guide that shall govern over all **ThematicNames** project. The aim is
 to keep all codebases clean and pristine. This includes high level guidance to help with simple
 decisions in the day-to-day development life.
 

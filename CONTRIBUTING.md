@@ -75,7 +75,7 @@ and it will be automatically reflected in the PR.
 
 ### Open a pull request
 
-Go to the [pull request page of ThematicUniqueNameGenerator][PRs] and in the top
+Go to the [pull request page of ThematicNames][PRs] and in the top
 of the page it will ask you if you want to open a pull request from your newly created branch.
 
 The title of the pull request should start with a [conventional commit] type.
