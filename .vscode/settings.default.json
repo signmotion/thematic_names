@@ -59,6 +59,7 @@
       {
         "hidden": [
           "**/.*",
+          "analysis_options.yaml",
           "CHANGELOG.md",
           "CODE_OF_CONDUCT.md",
           "CONTRIBUTING.md",
@@ -71,10 +72,9 @@
           "**/build/",
           "**/ios/",
           "**/windows/",
-          "**/analysis_options.yaml",
           "**/app.iml",
           "**/devtools_options.yaml",
-          "**/pubspec.lock"
+          "**/pubspec.*"
         ],
         "name": "Flutter",
         "description": "",
