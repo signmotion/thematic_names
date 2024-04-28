@@ -3,6 +3,13 @@
 All notable changes to the project `ThematicNames` will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.2
+
+- Enhanced `README`: added an opening speech in Welcome section, What's New section, shorted sentences, added a link to [CodeTriangle](https://codetriage.com), added a quality code badge, replaced badges with supported platforms to <https://badgen.net/pub>, updated a curated list, provided emojis to some sections, etc.
+- Added CI for GitHub.
+- Added note to `pubspec.yaml` about version: compatible with <https://semver.org>.
+- Upgraded dependencies.
+
 ## 0.4.1
 
 - Added names to `README`.
