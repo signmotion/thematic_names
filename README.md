@@ -1,28 +1,28 @@
 # Thematic Unique Name Generator
 
+![SDK version](https://badgen.net/pub/sdk-version/thematic_names?style=for-the-badge)
+![Supported platforms](https://badgen.net/pub/flutter-platform/thematic_names?style=for-the-badge)
+![Supported SDKs](https://badgen.net/pub/dart-platform/thematic_names?style=for-the-badge)
+
 ![Cover - Thematic Unique Name Generator](https://raw.githubusercontent.com/signmotion/thematic_names/master/images/cover.webp)
 
-[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Pub Package](https://img.shields.io/pub/v/thematic_names.svg?logo=dart&logoColor=00b9fc&color=blue)](https://pub.dartlang.org/packages/thematic_names)
-[![Code Size](https://img.shields.io/github/languages/code-size/signmotion/thematic_names?logo=github&logoColor=white)](https://github.com/signmotion/thematic_names)
-[![Publisher](https://img.shields.io/pub/publisher/thematic_names)](https://pub.dev/publishers/syrokomskyi.com)
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Pub Package](https://img.shields.io/pub/v/thematic_names.svg?logo=dart&logoColor=00b9fc&color=blue&style=for-the-badge)](https://pub.dartlang.org/packages/thematic_names)
+[![Code Size](https://img.shields.io/github/languages/code-size/signmotion/thematic_names?logo=github&logoColor=white&style=for-the-badge)](https://github.com/signmotion/thematic_names)
+[![Publisher](https://img.shields.io/pub/publisher/thematic_names?style=for-the-badge)](https://pub.dev/publishers/syrokomskyi.com)
 
-![SDK version](https://badgen.net/pub/sdk-version/thematic_names)
-![Supported platforms](https://badgen.net/pub/flutter-platform/thematic_names)
-![Supported SDKs](https://badgen.net/pub/dart-platform/thematic_names)
-
-[![Build Status](https://img.shields.io/github/actions/workflow/status/signmotion/thematic_names/dart-ci.yml?logo=github-actions&logoColor=white)](https://github.com/signmotion/thematic_names/actions)
-[![Pull Requests](https://img.shields.io/github/issues-pr/signmotion/thematic_names?logo=github&logoColor=white)](https://github.com/signmotion/thematic_names/pulls)
-[![Issues](https://img.shields.io/github/issues/signmotion/thematic_names?logo=github&logoColor=white)](https://github.com/signmotion/thematic_names/issues)
-[![Pub Score](https://img.shields.io/pub/points/thematic_names?logo=dart&logoColor=00b9fc)](https://pub.dev/packages/thematic_names/score)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/signmotion/thematic_names/dart-ci.yml?logo=github-actions&logoColor=white&style=for-the-badge)](https://github.com/signmotion/thematic_names/actions)
+[![Pull Requests](https://img.shields.io/github/issues-pr/signmotion/thematic_names?logo=github&logoColor=white&style=for-the-badge)](https://github.com/signmotion/thematic_names/pulls)
+[![Issues](https://img.shields.io/github/issues/signmotion/thematic_names?logo=github&logoColor=white&style=for-the-badge)](https://github.com/signmotion/thematic_names/issues)
+[![Pub Score](https://img.shields.io/pub/points/thematic_names?logo=dart&logoColor=00b9fc&style=for-the-badge)](https://pub.dev/packages/thematic_names/score)
 
 Generate an **infinite** number of **thematic calibrated unique** names.
 Easy-to-use and [well-tested](https://github.com/signmotion/thematic_names/tree/master/test) Dart package.
 Feel free to use it in your awesome project.
 
-[![CodeFactor](https://codefactor.io/repository/github/signmotion/thematic_names/badge)](https://codefactor.io/repository/github/signmotion/thematic_names)
+[![CodeFactor](https://codefactor.io/repository/github/signmotion/thematic_names/badge?style=for-the-badge)](https://codefactor.io/repository/github/signmotion/thematic_names)
 
-Share some ❤️ and star repo to support the project.
+Share some ❤️ and star repo to support the [Thematic Unique Name Generator](https://github.com/signmotion/thematic_names).
 
 _If you write an article about **ThematicNames** or any of [these](https://pub.dev/packages?q=publisher%3Asyrokomskyi.com&sort=updated) packages, let me know and I'll post the URL of the article in the **README**_ 🤝
 
@@ -168,4 +168,8 @@ Once you start using the **ThematicNames**, it will become easy to choose the fu
 
 It's just a habit of mine: writing down ideas that come to mind while working on a project. I confess that I rarely return to these notes. But now, hopefully, even if you don't have an idea yet, the above notes will help you choose the suitable "feature" and become a contributor to the open-source community.
 
-Created [with ❤️](https://syrokomskyi.com)
+Ready [for 🪙](https://webduet.de "The Modern Planet-Scale Site for Your Ambitions")
+
+Created [with ❤️](https://syrokomskyi.com "Andrii Syrokomskyi")
+
+[![fresher](https://img.shields.io/badge/maintained%20using-fresher-darkgreen.svg?style=for-the-badge)](https://github.com/signmotion/fresher "Keeps Projects Up to Date")
